@@ -41,7 +41,7 @@ function Home() {
           type="secondary"
         />
       </div>
-      <Results theme="" />
+      <Results theme="home" />
     </>
   );
 }
