@@ -2,11 +2,12 @@ import { useChess } from "../services/useChess";
 import { usePlayers } from "../services/usePlayers";
 export function useHomeData() {
   const {
-    players,
+    players: unSortedPlayers,
     isLoading: isPlayersLoading,
     error: playersError,
   } = usePlayers();
   const { chess, isLoading: isChessLoading, error: chessError } = useChess();
+  const players = unSortedPlayers?.sort((a, b) => a.id - b.id);
   const scores = players?.map((player) => {
     return chess?.reduce((total, current) => {
       let c = 0;
