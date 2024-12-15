@@ -11,7 +11,7 @@ function ResultRow({ players, colors, result, link }) {
           <div className="flex justify-center">
             <div
               className={`rounded-sm w-3 h-3  ${
-                colors[0] === "white" ? "bg-neutral-50" : "bg-neutral-900"
+                colors[0] === "white" ? "bg-neutral-50" : "bg-white/10"
               }`}
             ></div>
           </div>
@@ -21,8 +21,8 @@ function ResultRow({ players, colors, result, link }) {
                 result === "0.5"
                   ? ""
                   : +result === players[0].id
-                  ? "text-green-600"
-                  : "text-red-600"
+                  ? "text-green-500"
+                  : "text-red-500"
               }
             >
               {+result === players[0].id
@@ -39,8 +39,8 @@ function ResultRow({ players, colors, result, link }) {
                 result === "0.5"
                   ? ""
                   : +result === players[1].id
-                  ? "text-green-600"
-                  : "text-red-600"
+                  ? "text-green-500"
+                  : "text-red-500"
               }
             >
               {+result === players[1].id
@@ -55,7 +55,7 @@ function ResultRow({ players, colors, result, link }) {
           <div className="flex justify-center">
             <div
               className={`rounded-sm w-3 h-3  ${
-                colors[1] === "white" ? "bg-neutral-50" : "bg-neutral-900"
+                colors[1] === "white" ? "bg-neutral-50" : "bg-white/10"
               }`}
             ></div>
           </div>
